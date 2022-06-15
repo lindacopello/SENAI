@@ -1,0 +1,64 @@
+*{
+	font-family: 'Montserrat', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+body{
+	background-color: black;
+}
+
+
+
+.navbar-brand{
+	display: flex;
+	width: 10%;
+}
+
+.dropdown-item {
+	color: white;
+	background-color: black;
+}
+
+/* mudar letras do nav */
+.nav-link{
+	color: white;
+	font-size: 22px;
+}
+
+
+/* tamanho do icone */
+#icon{
+	width: 50%;
+}
+
+/* mexer no carrosel*/
+#carouselExampleIndicators{
+	width: 920px;
+	margin: auto;
+	margin-top: 40px;
+	margin-bottom: 40px;;
+	
+}
+
+/* footer icones */
+.circle-icons{
+	padding: 10px; /* espaçamento */
+	font-size: 18px; /* tamanho do icone */
+	width: 40px; /* tamanho do fundo */
+	text-align: center;
+	text-decoration: none;
+	margin: 8px 2px; /* espaçamento entre eles */
+	border-radius: 50%;
+	background: red; /* cor do fundo */
+	color: #000; /*cor do icone */
+}
+.circle-icons:hover {
+	background: #ccc; /*  cor de fundo com mouse encima */
+	color: #fff;  /* cor do icone com mouse encima */
+	opacity: 0.7;
+
+}
+
+#seta{
+	width: 20%;
+}
