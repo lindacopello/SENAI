@@ -1,34 +1,34 @@
 <?php 
-    include_once('../config/connection.php');
-       
-    session_start();
+include('../config/connection.php');
 
-        $login = $_POST['login'];
-        $senha = md5($_POST['senha']);
+session_start();
 
-        $stmt = $conectar->prepare("SELECT * FROM users WHERE login = :LOGIN AND senha = :SENHA");
+$login = $_POST['login'];
+$senha = md5($_POST['senha']);
 
-        $stmt->bindParam(":LOGIN", $login);
-        $stmt->bindParam(":SENHA", $senha);
+$stmt = $conectar->prepare("SELECT * FROM users WHERE login = :LOGIN AND senha = :SENHA");
 
-        //$stmt->bindValue(":LOGIN", md5($senha);
+$stmt->bindParam(":LOGIN", $login);
+$stmt->bindParam(":SENHA", $senha);
 
-        $stmt->execute();
+//$stmt->bindValue(":LOGIN", md5($senha);
 
-        if($stmt->rowCount() == 1){
-            $info = $stmt->fetch();
-            /*var_dump($info);
-            exit();*/
-            $_SESSION['logado'] = true;
-            $_SESSION['id'] = $info['id'];
-            $_SESSION['nome'] = $info['nome'];
-            $_SESSION['login'] = $info['login'];
-            $_SESSION['senha'] = $info['senha'];
-                        
-            header("Location: view2.php");
-        }else{
-            echo 'Usuário não cadastrado.';
-        }
+$stmt->execute();
+
+if($stmt->rowCount() == 1){
+    $info = $stmt->fetch();
+    /*var_dump($info);
+    exit();*/
+    $_SESSION['logado'] = true;
+    $_SESSION['id'] = $info['id'];
+    $_SESSION['nome'] = $info['nome'];
+    $_SESSION['login'] = $info['login'];
+    $_SESSION['senha'] = $info['senha'];
+                
+    header("Location: view2.php");
+}else{
+    echo 'Usuário não cadastrado.';
+}
 
 
 

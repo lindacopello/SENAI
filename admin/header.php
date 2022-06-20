@@ -15,11 +15,12 @@
 </head>
 
 <body>
-<main>
+    <main>
         <div class="container-fluid">
             <div class="row">
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 text-white bg-dark pt-3">
-                    <h2>Bom dia, Linda Copello </h2>
+                    <h2>Bom dia, Linda </h2>
+                    <p><a href="#">Deslogar</a></p>
                     <ul class="nav flex-column">
                         <li class="nav-item">
                             <a href="" class="nav-item">Controlar Posts</a>
@@ -33,8 +34,39 @@
             </div>
         </div>
     </main>
-    
-    <?php foreach ($results as $post) : ?>
+    <main>
+        <div class="container">
+
+            <h1 id="main-title">Meus Posts</h1>
+
+            <table class="table" id="contacts-table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Título</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">id</td>
+                        <td scope="row">Título</td>
+                        <td scope="row">Descrição</td>
+                        <td class="actions">
+                            <a href="">
+                                Ver
+                                <!-- use um ícone -->
+                            </a>
+                            <a href="">
+                                X
+                                <!-- use um ícone -->
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tbody>
+                    <?php foreach ($results as $post) : ?>
                         <tr>
                             <td scope="row"><?= $post["id"] ?></td>
                             <td scope="row"><?= $post["title"] ?></td>

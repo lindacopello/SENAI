@@ -7,7 +7,7 @@
    $title= $_POST['title'];
    $data= $_POST['data'];
    $description= $_POST['description'];
-
+   
    $arquivo = $_FILES['image'];
 
    move_uploaded_file($arquivo['tmp_name'], '../uploads/'.$arquivo['name']);

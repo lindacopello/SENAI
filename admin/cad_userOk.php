@@ -1,13 +1,13 @@
 <?php 
 
-include_once('../config/connection.php');
+include_once "../config/connection.php";
 
     $nome = $_POST['nome'];
     $login = $_POST['login'];
     $senha = md5($_POST['senha']);
 
     //preparar
-    $stmt = $conectar->prepare("INSERT INTO users (nome, login, senha) VALUES(:nome, :login, :senha)");
+    $stmt = $conectar->prepare("INSERT INTO users (nome, login, senha) VALUES (:nome, :login, :senha)");
 
     //tratar
     $stmt->bindParam(':nome', $nome);
